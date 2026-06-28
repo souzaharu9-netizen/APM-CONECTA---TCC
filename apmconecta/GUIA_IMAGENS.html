@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia - Adicionar Imagens APM Conecta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #7d9d1a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .subtitle { 
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .step { 
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #7d9d1a;
+            border-radius: 4px;
+        }
+        .step-number { 
+            display: inline-block;
+            background: #d4552c;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .step h3 { 
+            color: #333;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .image-box { 
+            background: white;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .image-box img { 
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .image-name { 
+            font-weight: bold;
+            color: #7d9d1a;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .folder-path { 
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code-block { 
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .success { 
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .warning { 
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .file-tree { 
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin: 15px 0;
+        }
+        .file-tree .folder { color: #d4552c; font-weight: bold; }
+        .file-tree .file { color: #7d9d1a; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Guia: Adicionar Imagens à Página de Abertura</h1>
+        <p class="subtitle">Instruções passo a passo para adicionar as imagens que você forneceu</p>
+
+        <div class="step">
+            <h3><span class="step-number">1</span>Preparação</h3>
+            <p>Você tem 2 imagens que precisam ser adicionadas ao projeto:</p>
+            <ul style="margin: 15px 0 0 20px;">
+                <li><strong>classroom.jpg</strong> - Imagem de sala de aula (background hero)</li>
+                <li><strong>study.jpg</strong> - Imagem de criança estudando (seção sobre)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">2</span>Localização da Pasta</h3>
+            <p>As imagens devem ser colocadas em:</p>
+            <div class="folder-path">
+                apmconecta/public/images/
+            </div>
+            <p>Estrutura do projeto:</p>
+            <div class="file-tree">
+                APM-CONECTA---TCC/
+                ├── apmconecta/
+                │   ├── public/
+                │   │   └── <span class="folder">images/</span> ← <strong>Coloque as imagens aqui</strong>
+                │   ├── src/
+                │   ├── package.json
+                │   └── vite.config.js
+                └── README.md
+            </div>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span>Copiar Imagens</h3>
+            <p>Você pode adicionar as imagens de 3 formas:</p>
+            
+            <h4 style="margin: 15px 0 10px 0;">Opção A: Usando o Explorador de Arquivos (Recomendado)</h4>
+            <ol style="margin-left: 20px;">
+                <li>Abra o VS Code em <code>apmconecta/public/images/</code></li>
+                <li>Arraste e solte os arquivos de imagem na pasta</li>
+                <li>Pronto! As imagens estarão disponíveis</li>
+            </ol>
+
+            <h4 style="margin: 15px 0 10px 0;">Opção B: Usando Terminal</h4>
+            <div class="code-block">
+# Se tiver os arquivos em outro local
+cp /caminho/para/classroom.jpg apmconecta/public/images/
+cp /caminho/para/study.jpg apmconecta/public/images/
+
+# Verificar se foram copiados corretamente
+ls -la apmconecta/public/images/
+            </div>
+
+            <h4 style="margin: 15px 0 10px 0;">Opção C: Salvando Screenshots</h4>
+            <ol style="margin-left: 20px;">
+                <li>Abra as imagens que você enviou</li>
+                <li>Clique com botão direito → Salvar imagem como...</li>
+                <li>Salve em <code>apmconecta/public/images/</code> com os nomes corretos</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">4</span>Verificar as Imagens</h3>
+            <p>Após adicionar as imagens, você deve ter:</p>
+            <div class="folder-path">
+apmconecta/public/images/
+├── classroom.jpg
+├── study.jpg
+└── README.md
+            </div>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">5</span>Testar no Navegador</h3>
+            <p>Inicie o servidor de desenvolvimento:</p>
+            <div class="code-block">
+cd apmconecta
+npm run dev
+            </div>
+            <p style="margin-top: 15px;">Acesse <strong>http://localhost:5176/</strong> e veja as imagens sendo exibidas:</p>
+            <ul style="margin: 15px 0 0 20px;">
+                <li>🖼️ Classroom.jpg aparecerá no hero section (fundo)</li>
+                <li>📸 Study.jpg aparecerá na seção "O que é o APM Conecta?"</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Importante:</strong> Os nomes dos arquivos devem ser exatamente:
+            <ul style="margin: 10px 0 0 20px;">
+                <li><code>classroom.jpg</code> (minúsculas)</li>
+                <li><code>study.jpg</code> (minúsculas)</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <strong>✅ Tudo pronto!</strong> Após adicionar as imagens, o site exibirá o design completo com as fotos da página de abertura. O código já foi preparado para receber as imagens automaticamente.
+        </div>
+
+        <div class="step">
+            <h3>📊 Dimensões Recomendadas</h3>
+            <ul style="margin: 10px 0 0 20px;">
+                <li><strong>classroom.jpg:</strong> Mínimo 1200x600px (ideal 1920x1080px ou maior)</li>
+                <li><strong>study.jpg:</strong> Mínimo 600x450px (ideal 800x600px ou maior)</li>
+            </ul>
+            <p style="margin-top: 15px;"><em>Nota: As imagens serão redimensionadas automaticamente pelo CSS, mas quanto maior a qualidade, melhor o resultado final.</em></p>
+        </div>
+
+        <div class="step">
+            <h3>❓ Dúvidas Frequentes</h3>
+            <p><strong>P: As imagens não estão aparecendo?</strong></p>
+            <p>R: Verifique se os nomes estão corretos (classroom.jpg e study.jpg em minúsculas) e se estão na pasta <code>apmconecta/public/images/</code></p>
+            
+            <p style="margin-top: 15px;"><strong>P: Qual é a diferença entre JPG e PNG?</strong></p>
+            <p>R: JPG é melhor para fotos (menor tamanho), PNG é melhor para transparência. Ambos funcionam.</p>
+
+            <p style="margin-top: 15px;"><strong>P: Posso usar outras extensões?</strong></p>
+            <p>R: Sim! WebP (melhor compressão), SVG (escalável), ou qualquer formato de imagem comum.</p>
+        </div>
+    </div>
+</body>
+</html>
