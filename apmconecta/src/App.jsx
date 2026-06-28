@@ -1,8 +1,6 @@
 import { memo } from "react";
 import AppRoutes from "./routes/AppRoutes";
 
-impo;
-
 /**
  * Componente raiz da aplicação — renderiza as rotas.
  */
