@@ -75,7 +75,11 @@ const Abertura = () => {
             </p>
           </div>
           <div className="about-image">
-            <div className="placeholder-image">📚</div>
+            <img 
+              src="/images/study.jpg" 
+              alt="Criança estudando" 
+              className="about-img"
+            />
           </div>
         </div>
       </section>
