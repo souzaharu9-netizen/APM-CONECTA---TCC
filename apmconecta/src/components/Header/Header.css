@@ -1,0 +1,30 @@
+.header{
+
+    height:70px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:bold;
+
+}
+
+.usuario{
+
+    font-size:18px;
+
+}
