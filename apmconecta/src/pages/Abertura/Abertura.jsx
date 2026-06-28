@@ -12,10 +12,10 @@ const Abertura = () => {
             <span>APM Conecta</span>
           </div>
           <div className="nav-buttons">
-            <Link to="/login" className="btn-entrar">
+            <Link to="/login" className="nav-btn-entrar">
               Entrar
             </Link>
-            <Link to="/cadastro" className="btn-criar">
+            <Link to="/cadastro" className="nav-btn-criar">
               Criar Conta
             </Link>
           </div>
@@ -25,14 +25,14 @@ const Abertura = () => {
       <section className="hero">
         <div className="hero-content">
           <span className="badge">🏫 Associação de Pais e Mestres</span>
-          <h1>Pequenas ações, grandes mudanças.</h1>
+          <h1>Pequenas ações,<br />grandes mudanças.</h1>
           <p>
             O APM Conecta une escola, família e comunidade em uma plataforma
             transparente, participativa e moderna.
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary">Conhecer Campanhas →</button>
-            <button className="btn-secondary">Criar conta grátis</button>
+            <Link to="/" className="btn-hero btn-hero-primary">Conhecer Campanhas →</Link>
+            <Link to="/cadastro" className="btn-hero btn-hero-secondary">Criar conta grátis</Link>
           </div>
         </div>
       </section>
