@@ -1,148 +1,120 @@
-.login-container{
+.login-container {
+  width: 100%;
+  height: 100vh;
 
-    width:100%;
-    height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:#eef2f7;
-
+  background: #eef2f7;
 }
 
-.login-card{
+.login-card {
+  width: 900px;
 
-    width:900px;
+  display: flex;
 
-    display:flex;
+  background: white;
 
-    background:white;
+  border-radius: 15px;
 
-    border-radius:15px;
+  overflow: hidden;
 
-    overflow:hidden;
-
-    box-shadow:0 0 20px rgba(0,0,0,.15);
-
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.login-esquerda{
+.login-esquerda {
+  width: 45%;
 
-    width:45%;
+  background: #2e7d32;
 
-    background:#2E7D32;
+  color: white;
 
-    color:white;
+  padding: 50px;
 
-    padding:50px;
+  display: flex;
 
-    display:flex;
+  flex-direction: column;
 
-    flex-direction:column;
-
-    justify-content:center;
-
+  justify-content: center;
 }
 
-.login-esquerda h1{
+.login-esquerda h1 {
+  font-size: 42px;
 
-    font-size:42px;
-
-    margin-bottom:20px;
-
+  margin-bottom: 20px;
 }
 
-.login-esquerda p{
+.login-esquerda p {
+  font-size: 18px;
 
-    font-size:18px;
-
-    line-height:30px;
-
+  line-height: 30px;
 }
 
-.login-direita{
+.login-direita {
+  width: 55%;
 
-    width:55%;
-
-    padding:50px;
-
+  padding: 50px;
 }
 
-.login-direita h2{
+.login-direita h2 {
+  text-align: center;
 
-    text-align:center;
-
-    margin-bottom:30px;
-
+  margin-bottom: 30px;
 }
 
-form{
+form {
+  display: flex;
 
-    display:flex;
-
-    flex-direction:column;
-
+  flex-direction: column;
 }
 
-label{
-
-    margin-top:15px;
-
+label {
+  margin-top: 15px;
 }
 
-input{
+input {
+  padding: 12px;
 
-    padding:12px;
+  margin-top: 8px;
 
-    margin-top:8px;
+  border-radius: 8px;
 
-    border-radius:8px;
-
-    border:1px solid #ccc;
-
+  border: 1px solid #ccc;
 }
 
-button{
+button {
+  margin-top: 30px;
 
-    margin-top:30px;
+  padding: 14px;
 
-    padding:14px;
+  border: none;
 
-    border:none;
+  background: #2e7d32;
 
-    background:#2E7D32;
+  color: white;
 
-    color:white;
+  border-radius: 8px;
 
-    border-radius:8px;
+  cursor: pointer;
 
-    cursor:pointer;
-
-    font-size:17px;
-
+  font-size: 17px;
 }
 
-button:hover{
-
-    background:#1f5d24;
-
+button:hover {
+  background: #1f5d24;
 }
 
-.links{
+.links {
+  margin-top: 25px;
 
-    margin-top:25px;
+  display: flex;
 
-    display:flex;
-
-    justify-content:space-between;
-
+  justify-content: space-between;
 }
 
-.links a{
+.links a {
+  color: #1565c0;
 
-    color:#1565C0;
-
-    text-decoration:none;
-
+  text-decoration: none;
 }

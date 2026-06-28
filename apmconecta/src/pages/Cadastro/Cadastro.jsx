@@ -3,82 +3,39 @@ import "./Cadastro.css";
 import { Link } from "react-router-dom";
 
 const Cadastro = () => {
+  return (
+    <div className="cadastro-container">
+      <div className="cadastro-card">
+        <h1>Criar Conta</h1>
 
-    return (
+        <form>
+          <input type="text" placeholder="Nome Completo" />
 
-        <div className="cadastro-container">
+          <input type="date" />
 
-            <div className="cadastro-card">
+          <input type="email" placeholder="E-mail" />
 
-                <h1>Criar Conta</h1>
+          <input type="text" placeholder="Telefone" />
 
-                <form>
+          <input type="password" placeholder="Senha" />
 
-                    <input
-                        type="text"
-                        placeholder="Nome Completo"
-                    />
+          <input type="password" placeholder="Confirmar Senha" />
 
-                    <input
-                        type="date"
-                    />
+          <select>
+            <option>Escolha seu perfil</option>
 
-                    <input
-                        type="email"
-                        placeholder="E-mail"
-                    />
+            <option>Estudante</option>
 
-                    <input
-                        type="text"
-                        placeholder="Telefone"
-                    />
+            <option>Adulto</option>
+          </select>
 
-                    <input
-                        type="password"
-                        placeholder="Senha"
-                    />
+          <button>Cadastrar</button>
+        </form>
 
-                    <input
-                        type="password"
-                        placeholder="Confirmar Senha"
-                    />
-
-                    <select>
-
-                        <option>
-                            Escolha seu perfil
-                        </option>
-
-                        <option>
-                            Estudante
-                        </option>
-
-                        <option>
-                            Adulto
-                        </option>
-
-                    </select>
-
-                    <button>
-
-                        Cadastrar
-
-                    </button>
-
-                </form>
-
-                <Link to="/login">
-
-                    Já possui conta? Entrar
-
-                </Link>
-
-            </div>
-
-        </div>
-
-    );
-
+        <Link to="/login">Já possui conta? Entrar</Link>
+      </div>
+    </div>
+  );
 };
 
 export { Cadastro };

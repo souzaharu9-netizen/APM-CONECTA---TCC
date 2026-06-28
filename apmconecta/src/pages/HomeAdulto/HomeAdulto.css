@@ -1,47 +1,37 @@
-.layout{
-
-    display:flex;
-
+.layout {
+  display: flex;
 }
 
-.conteudo{
+.conteudo {
+  flex: 1;
 
-    flex:1;
+  padding: 40px;
 
-    padding:40px;
-
-    background:#F4F6F9;
-
+  background: #f4f6f9;
 }
 
-.cards{
+.cards {
+  margin-top: 30px;
 
-    margin-top:30px;
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-    gap:25px;
-
+  gap: 25px;
 }
 
-.card{
+.card {
+  background: white;
 
-    background:white;
+  padding: 25px;
 
-    padding:25px;
+  border-radius: 10px;
 
-    border-radius:10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-
-    transition:.3s;
-
+  transition: 0.3s;
 }
 
-.card:hover{
-
-    transform:translateY(-5px);
-
+.card:hover {
+  transform: translateY(-5px);
 }

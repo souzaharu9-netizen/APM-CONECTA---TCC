@@ -4,71 +4,51 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
 
 const Avisos = () => {
+  const avisos = [
+    {
+      titulo: "Reunião de Pais",
+      data: "15/08/2026",
+      descricao: "Reunião geral da APM.",
+    },
 
-    const avisos=[
+    {
+      titulo: "Feira Cultural",
+      data: "28/08/2026",
+      descricao: "Participação dos estudantes.",
+    },
 
-        {
-            titulo:"Reunião de Pais",
-            data:"15/08/2026",
-            descricao:"Reunião geral da APM."
-        },
+    {
+      titulo: "Campanha Solidária",
+      data: "10/09/2026",
+      descricao: "Arrecadação de alimentos.",
+    },
+  ];
 
-        {
-            titulo:"Feira Cultural",
-            data:"28/08/2026",
-            descricao:"Participação dos estudantes."
-        },
+  return (
+    <>
+      <Header />
 
-        {
-            titulo:"Campanha Solidária",
-            data:"10/09/2026",
-            descricao:"Arrecadação de alimentos."
-        }
+      <div className="layout">
+        <Sidebar />
 
-    ];
+        <main className="conteudo">
+          <h1>Avisos</h1>
 
-    return(
+          {avisos.map((item, index) => (
+            <div className="card" key={index}>
+              <h2>{item.titulo}</h2>
 
-        <>
+              <p>{item.descricao}</p>
 
-        <Header/>
+              <small>{item.data}</small>
+            </div>
+          ))}
+        </main>
+      </div>
 
-        <div className="layout">
-
-            <Sidebar/>
-
-            <main className="conteudo">
-
-                <h1>Avisos</h1>
-
-                {
-
-                    avisos.map((item,index)=>(
-
-                        <div className="card" key={index}>
-
-                            <h2>{item.titulo}</h2>
-
-                            <p>{item.descricao}</p>
-
-                            <small>{item.data}</small>
-
-                        </div>
-
-                    ))
-
-                }
-
-            </main>
-
-        </div>
-
-        <Footer/>
-
-        </>
-
-    )
-
+      <Footer />
+    </>
+  );
 };
 
 export { Avisos };

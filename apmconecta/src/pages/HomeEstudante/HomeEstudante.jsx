@@ -6,89 +6,49 @@ import Footer from "../../components/Footer/Footer";
 import "./HomeEstudante.css";
 
 const HomeEstudante = () => {
+  return (
+    <>
+      <Header />
 
-    return(
+      <div className="layout">
+        <Sidebar />
 
-        <>
+        <main className="conteudo">
+          <h1>Bem-vindo!</h1>
 
-            <Header/>
+          <p>Esta é sua área de estudante.</p>
 
-            <div className="layout">
+          <div className="cards">
+            <div className="card">
+              <h2>📢 Avisos</h2>
 
-                <Sidebar/>
-
-                <main className="conteudo">
-
-                    <h1>Bem-vindo!</h1>
-
-                    <p>
-
-                        Esta é sua área de estudante.
-
-                    </p>
-
-                    <div className="cards">
-
-                        <div className="card">
-
-                            <h2>📢 Avisos</h2>
-
-                            <p>
-
-                                Veja os comunicados da escola.
-
-                            </p>
-
-                        </div>
-
-                        <div className="card">
-
-                            <h2>📅 Eventos</h2>
-
-                            <p>
-
-                                Próximos eventos escolares.
-
-                            </p>
-
-                        </div>
-
-                        <div className="card">
-
-                            <h2>📚 Documentos</h2>
-
-                            <p>
-
-                                Consulte documentos importantes.
-
-                            </p>
-
-                        </div>
-
-                        <div className="card">
-
-                            <h2>👤 Perfil</h2>
-
-                            <p>
-
-                                Atualize suas informações.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </main>
-
+              <p>Veja os comunicados da escola.</p>
             </div>
 
-            <Footer/>
+            <div className="card">
+              <h2>📅 Eventos</h2>
 
-        </>
+              <p>Próximos eventos escolares.</p>
+            </div>
 
-    );
+            <div className="card">
+              <h2>📚 Documentos</h2>
 
+              <p>Consulte documentos importantes.</p>
+            </div>
+
+            <div className="card">
+              <h2>👤 Perfil</h2>
+
+              <p>Atualize suas informações.</p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export { HomeEstudante };

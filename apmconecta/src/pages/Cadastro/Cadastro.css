@@ -1,62 +1,50 @@
-.cadastro-container{
+.cadastro-container {
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  min-height: 100vh;
 
-    min-height:100vh;
-
-    background:#f3f6fa;
-
+  background: #f3f6fa;
 }
 
-.cadastro-card{
+.cadastro-card {
+  width: 550px;
 
-    width:550px;
+  background: white;
 
-    background:white;
+  padding: 40px;
 
-    padding:40px;
+  border-radius: 12px;
 
-    border-radius:12px;
-
-    box-shadow:0 0 15px rgba(0,0,0,.15);
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-.cadastro-card h1{
+.cadastro-card h1 {
+  text-align: center;
 
-    text-align:center;
-
-    margin-bottom:30px;
-
+  margin-bottom: 30px;
 }
 
-.cadastro-card form{
+.cadastro-card form {
+  display: flex;
 
-    display:flex;
-
-    flex-direction:column;
-
+  flex-direction: column;
 }
 
 .cadastro-card input,
-.cadastro-card select{
+.cadastro-card select {
+  margin: 10px 0;
 
-    margin:10px 0;
+  padding: 13px;
 
-    padding:13px;
+  border-radius: 8px;
 
-    border-radius:8px;
-
-    border:1px solid #ccc;
-
+  border: 1px solid #ccc;
 }
 
-.cadastro-card button{
-
-    margin-top:20px;
-
+.cadastro-card button {
+  margin-top: 20px;
 }

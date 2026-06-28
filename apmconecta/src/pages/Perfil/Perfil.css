@@ -1,59 +1,47 @@
-.perfil-card{
+.perfil-card {
+  display: flex;
 
-    display:flex;
+  gap: 50px;
 
-    gap:50px;
+  margin-top: 40px;
 
-    margin-top:40px;
+  background: white;
 
-    background:white;
+  padding: 40px;
 
-    padding:40px;
+  border-radius: 12px;
 
-    border-radius:12px;
-
-    box-shadow:0 0 15px rgba(0,0,0,.1);
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.foto{
+.foto {
+  width: 220px;
 
-    width:220px;
-
-    text-align:center;
-
+  text-align: center;
 }
 
-.foto img{
+.foto img {
+  width: 180px;
 
-    width:180px;
+  height: 180px;
 
-    height:180px;
+  border-radius: 50%;
 
-    border-radius:50%;
-
-    object-fit:cover;
-
+  object-fit: cover;
 }
 
-.foto button{
-
-    margin-top:20px;
-
+.foto button {
+  margin-top: 20px;
 }
 
-.dados{
+.dados {
+  flex: 1;
 
-    flex:1;
+  display: flex;
 
-    display:flex;
-
-    flex-direction:column;
-
+  flex-direction: column;
 }
 
-.dados input{
-
-    margin-bottom:20px;
-
+.dados input {
+  margin-bottom: 20px;
 }

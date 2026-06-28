@@ -5,67 +5,48 @@ import Footer from "../../components/Footer/Footer";
 import "./Perfil.css";
 
 const Perfil = () => {
+  return (
+    <>
+      <Header />
 
-    return(
+      <div className="layout">
+        <Sidebar />
 
-        <>
-            <Header/>
+        <main className="conteudo">
+          <h1>Meu Perfil</h1>
 
-            <div className="layout">
+          <div className="perfil-card">
+            <div className="foto">
+              <img
+                src="https://via.placeholder.com/180"
+                alt="Foto do usuário"
+              />
 
-                <Sidebar/>
-
-                <main className="conteudo">
-
-                    <h1>Meu Perfil</h1>
-
-                    <div className="perfil-card">
-
-                        <div className="foto">
-
-                            <img
-                                src="https://via.placeholder.com/180"
-                                alt="Foto do usuário"
-                            />
-
-                            <button>Alterar Foto</button>
-
-                        </div>
-
-                        <div className="dados">
-
-                            <label>Nome</label>
-                            <input type="text" value="João da Silva"/>
-
-                            <label>Email</label>
-                            <input type="email" value="joao@email.com"/>
-
-                            <label>Telefone</label>
-                            <input type="text" value="(11)99999-9999"/>
-
-                            <label>Endereço</label>
-                            <input type="text" value="Rua Exemplo"/>
-
-                            <button className="salvar">
-
-                                Salvar Alterações
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </main>
-
+              <button>Alterar Foto</button>
             </div>
 
-            <Footer/>
+            <div className="dados">
+              <label>Nome</label>
+              <input type="text" value="João da Silva" />
 
-        </>
+              <label>Email</label>
+              <input type="email" value="joao@email.com" />
 
-    )
+              <label>Telefone</label>
+              <input type="text" value="(11)99999-9999" />
 
+              <label>Endereço</label>
+              <input type="text" value="Rua Exemplo" />
+
+              <button className="salvar">Salvar Alterações</button>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export { Perfil };

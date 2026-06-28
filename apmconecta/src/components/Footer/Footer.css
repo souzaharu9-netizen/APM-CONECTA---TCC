@@ -1,11 +1,9 @@
-.footer{
+.footer {
+  background: #2e7d32;
 
-    background:#2E7D32;
+  color: white;
 
-    color:white;
+  text-align: center;
 
-    text-align:center;
-
-    padding:18px;
-
+  padding: 18px;
 }
