@@ -7,10 +7,10 @@ const Abertura = () => {
     <div className="abertura">
       <nav className="navbar">
         <div className="nav-container">
-          <div className="nav-logo">
+          <Link to="/" className="nav-logo">
             <span className="logo-icon">A</span>
             <span>APM Conecta</span>
-          </div>
+          </Link>
           <div className="nav-buttons">
             <Link to="/login" className="nav-btn-entrar">
               Entrar
@@ -34,25 +34,6 @@ const Abertura = () => {
             <Link to="/" className="btn-hero btn-hero-primary">Conhecer Campanhas →</Link>
             <Link to="/cadastro" className="btn-hero btn-hero-secondary">Criar conta grátis</Link>
           </div>
-        </div>
-      </section>
-
-      <section className="stats">
-        <div className="stat-item">
-          <h3>R$ 44.200</h3>
-          <p>Arrecadados</p>
-        </div>
-        <div className="stat-item">
-          <h3>373</h3>
-          <p>Participantes</p>
-        </div>
-        <div className="stat-item">
-          <h3>3</h3>
-          <p>Campanhas ativas</p>
-        </div>
-        <div className="stat-item">
-          <h3>8</h3>
-          <p>Projetos concluídos</p>
         </div>
       </section>
 
@@ -198,10 +179,10 @@ const Abertura = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-column">
-            <div className="footer-logo">
+            <Link to="/" className="footer-logo">
               <span className="logo-icon">A</span>
               <span>APM Conecta</span>
-            </div>
+            </Link>
             <p>
               Aproximando escola, família e comunidade em prol de uma educação
               de qualidade.

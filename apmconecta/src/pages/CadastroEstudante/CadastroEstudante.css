@@ -1,0 +1,880 @@
+/* ===========================================================
+   CADASTRO ESTUDANTE
+   CSS EXCLUSIVO
+=========================================================== */
+
+:root{
+
+    --ce-verde:#7B8508;
+    --ce-verde-hover:#AAB14C;
+
+    --ce-azul:#2F8ED4;
+    --ce-azul2:#247CC0;
+
+    --ce-laranja:#F58220;
+
+    --ce-fundo:#FFF7C8;
+
+    --ce-card:#FFFDF6;
+
+    --ce-borda:#E7DBA8;
+
+    --ce-texto:#575757;
+
+    --ce-radius:18px;
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+.ce-page{
+
+    min-height:100vh;
+
+    background:var(--ce-fundo);
+
+    display:flex;
+
+    flex-direction:column;
+
+    font-family:
+    "Segoe UI",
+    sans-serif;
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.ce-header{
+
+    height:72px;
+
+    background:var(--ce-verde);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+}
+
+.ce-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#FFF;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.ce-logo-circle{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:var(--ce-laranja);
+
+    color:#FFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+.ce-back{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+}
+
+.ce-back:hover{
+
+    opacity:.85;
+
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.ce-banner{
+
+    background:linear-gradient(
+        180deg,
+        #3495DB,
+        #257EC2
+    );
+
+    color:#FFF;
+
+    text-align:center;
+
+    padding:45px 20px 90px;
+
+}
+
+.ce-banner-icon{
+
+    width:78px;
+
+    height:78px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.ce-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+}
+
+.ce-banner h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    font-family:Georgia,serif;
+
+}
+
+.ce-banner p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================
+   CONTAINER
+=========================================== */
+
+.ce-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:-60px;
+
+    padding:0 20px 70px;
+
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.ce-card{
+
+    width:100%;
+
+    max-width:960px;
+
+    background:var(--ce-card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.12);
+
+}
+/* ===========================================================
+   SEÇÕES
+=========================================================== */
+
+.ce-section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:18px 25px;
+
+    background:#EAF5FE;
+
+    color:var(--ce-azul);
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-bottom:1px solid #D9EAF8;
+
+}
+
+/* ===========================================================
+   GRID
+=========================================================== */
+
+.ce-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    padding:28px;
+
+}
+
+.ce-full{
+
+    grid-column:1/3;
+
+}
+
+/* ===========================================================
+   CAMPOS
+=========================================================== */
+
+.ce-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.ce-field label{
+
+    margin-bottom:8px;
+
+    color:#74652B;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.ce-input,
+
+.ce-select{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 16px;
+
+    border:1px solid var(--ce-borda);
+
+    border-radius:14px;
+
+    background:#FFF;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.ce-input:focus,
+
+.ce-select:focus{
+
+    outline:none;
+
+    border-color:var(--ce-azul);
+
+    box-shadow:0 0 0 4px rgba(47,142,212,.12);
+
+}
+
+/* ===========================================
+   CAMPO SENHA
+=========================================== */
+
+/* ================= SENHA ================= */
+
+.ce-password{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ce-password .ce-input{
+    width: 100%;
+    padding-right: 48px;
+}
+
+.ce-eye{
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+
+    color: #777;
+    z-index: 10;
+}
+
+/* ===========================================================
+   PERFIL
+=========================================================== */
+
+.ce-profile{
+
+    padding:0 28px 30px;
+
+}
+
+.ce-profile label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#74652B;
+
+}
+
+.ce-profile-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    border:2px solid #B8D6F4;
+
+    background:#EEF8FF;
+
+}
+
+.ce-profile-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--ce-azul);
+
+    font-weight:600;
+
+}
+
+.ce-profile-status{
+
+    background:var(--ce-azul);
+
+    color:#FFF;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+/* ===========================================================
+   TERMOS
+=========================================================== */
+
+.ce-terms{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+    padding:0 28px 28px;
+
+}
+
+.ce-terms input{
+
+    width:18px;
+
+    height:18px;
+
+    margin-top:4px;
+
+}
+
+.ce-terms label{
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+.ce-terms a{
+
+    color:var(--ce-laranja);
+
+    font-weight:600;
+
+}
+
+.ce-terms a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================================================
+   BOTÕES
+=========================================================== */
+
+.ce-buttons{
+    display: flex;
+    gap: 18px;
+    padding: 0 28px 35px;
+}
+
+.ce-btn{
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 54px;
+
+    padding: 0 20px;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.ce-btn-back{
+    background: #FFF;
+
+    border: 2px solid #D8D09B;
+
+    color: #666;
+
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ce-btn-back:hover{
+
+    background:#F5F0D5;
+
+}
+
+.ce-btn-clear{
+
+    border:2px solid var(--ce-laranja);
+
+    background:#FFF;
+
+    color:var(--ce-laranja);
+
+}
+
+.ce-btn-clear:hover{
+
+    background:var(--ce-laranja);
+
+    color:#FFF;
+
+}
+
+.ce-btn-submit{
+
+    border:none;
+
+    background:var(--ce-verde-hover);
+
+    color:#FFF;
+
+}
+
+.ce-btn-submit:hover{
+
+    background:var(--ce-verde);
+
+    transform:translateY(-2px);
+
+}
+
+.ce-btn-back{
+    text-decoration: none;
+    color:#666;
+}
+
+.ce-btn-back:hover{
+    text-decoration:none;
+}
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+.ce-footer{
+
+    margin-top:auto;
+
+    background:var(--ce-verde);
+
+    color:#FFF;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 60px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.ce-footer p{
+
+    font-size:14px;
+
+}
+
+.ce-footer-links{
+
+    display:flex;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.ce-footer-links a{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.ce-footer-links a:hover{
+
+    opacity:.8;
+
+}
+/* ===========================================================
+   ANIMAÇÕES
+=========================================================== */
+
+.ce-card{
+
+    animation:ceFade .5s ease;
+
+}
+
+@keyframes ceFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.ce-btn{
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s,
+        box-shadow .25s;
+
+}
+
+.ce-btn:hover{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.ce-input,
+
+.ce-select{
+
+    transition:
+        border-color .25s,
+        box-shadow .25s,
+        transform .15s;
+
+}
+
+.ce-input:focus,
+
+.ce-select:focus{
+
+    transform:scale(1.01);
+
+}
+/* ===========================================================
+   TABLET
+=========================================================== */
+
+@media(max-width:992px){
+
+    .ce-header{
+
+        padding:20px;
+
+    }
+
+    .ce-card{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ===========================================================
+   CELULAR
+=========================================================== */
+
+@media(max-width:768px){
+
+    .ce-header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    .ce-banner{
+
+        padding:40px 20px 80px;
+
+    }
+
+    .ce-banner h1{
+
+        font-size:32px;
+
+    }
+
+    .ce-grid{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+
+    }
+
+    .ce-full{
+
+        grid-column:auto;
+
+    }
+
+    .ce-profile,
+
+    .ce-terms,
+
+    .ce-buttons{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+    .ce-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .ce-footer{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px 20px;
+
+    }
+
+    .ce-footer-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ===========================================================
+   TELAS PEQUENAS
+=========================================================== */
+
+@media(max-width:480px){
+
+    .ce-banner h1{
+
+        font-size:26px;
+
+    }
+
+    .ce-banner p{
+
+        font-size:14px;
+
+    }
+
+    .ce-banner-icon{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:28px;
+
+    }
+
+    .ce-input,
+
+    .ce-select{
+
+        height:48px;
+
+        font-size:14px;
+
+    }
+
+    .ce-btn{
+
+        height:50px;
+
+        font-size:15px;
+
+    }
+
+}

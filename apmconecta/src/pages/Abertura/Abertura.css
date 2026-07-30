@@ -30,6 +30,7 @@
   color: white;
   font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .logo-icon {
@@ -49,6 +50,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
+  border-radius: 80px;
 }
 
 .nav-btn-entrar,
@@ -117,18 +119,20 @@
 }
 
 .hero h1 {
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-  font-size: 19px;
-  margin-bottom: 40px;
-  line-height: 1.7;
-  font-weight: 400;
+  font-size: 21px;
+  margin-bottom: 45px;
+  line-height: 1.75;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons {
@@ -196,14 +200,16 @@
 }
 
 .stat-item h3 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  letter-spacing: -1.5px;
 }
 
 .stat-item p {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.95;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -236,10 +242,11 @@
 }
 
 .about-text h2 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 800;
   line-height: 1.2;
   color: #000;
+  letter-spacing: -0.8px;
 }
 
 .about-text p {
@@ -296,27 +303,35 @@
 }
 
 .how-card {
-  background: #fff9e6;
-  padding: 45px 35px;
+  background: #fffcf2;
+  padding: 50px 40px;
   border-radius: 14px;
   position: relative;
   text-align: center;
-  border: 1px solid #f5f0dc;
+  border: 2px solid #f3e8d9;
   transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
 }
 
 .how-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  border-color: #d4552c;
 }
 
 .card-icon {
-  font-size: 48px;
-  margin-bottom: 15px;
-  height: 60px;
+  font-size: 54px;
+  margin-bottom: 20px;
+  height: 75px;
+  width: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #ffe8d9, #ffdbcf);
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card-number {
@@ -329,16 +344,18 @@
 }
 
 .how-card h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 20px 0 12px 0;
-  color: #000;
+  margin: 15px 0 15px 0;
+  color: #1a1a1a;
+  letter-spacing: -0.4px;
 }
 
 .how-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.7;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  font-weight: 500;
 }
 
 /* ===== BENEFITS SECTION ===== */
@@ -369,41 +386,46 @@
 
 .benefit-card {
   background: white;
-  padding: 35px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 40px 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
 }
 
 .benefit-icon {
   font-size: 42px;
-  margin-bottom: 15px;
-  height: 60px;
+  margin-bottom: 20px;
+  width: 75px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f0dc;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #f6e8d7, #faf3e8);
+  border-radius: 12px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
 }
 
 .benefit-card h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  margin: 15px 0 8px 0;
-  color: #000;
+  margin: 10px 0 12px 0;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
 }
 
 .benefit-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.6;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 /* ===== MISSION SECTION ===== */

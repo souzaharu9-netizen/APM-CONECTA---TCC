@@ -1,45 +1,111 @@
-import { memo } from "react";
+import { useState } from "react";
 import "./Login.css";
+import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+function Login() {
+  const [mostrarSenha, setMostrarSenha] = useState(false);
+
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <div className="login-esquerda">
-          <h1>APM CONECTA</h1>
+    <div className="login-page">
+      {/* Cabeçalho */}
+      <header className="login-header">
+        <Link to="/" className="login-logo">
+          <div className="login-logo-circle">A</div>
+          <span>APM Conecta</span>
+        </Link>
 
-          <p>
-            Bem-vindo ao sistema da Associação de Pais e Mestres. Faça login
-            para acessar sua área.
-          </p>
-        </div>
+        <Link to="/" className="login-back">
+          ← Voltar
+        </Link>
+      </header>
 
-        <div className="login-direita">
-          <h2>Entrar</h2>
+      {/* Conteúdo */}
+      <main className="login-main">
+        <div className="login-container">
+          <div className="login-icon">A</div>
 
-          <form>
-            <label>E-mail</label>
+          <h1>Bem-vindo de volta</h1>
+          <p>Entre na sua conta APM Conecta</p>
 
-            <input type="email" placeholder="Digite seu e-mail" />
+          <div className="login-card">
+            {/* Email */}
+            <label htmlFor="email">E-mail</label>
 
-            <label>Senha</label>
+            <input
+              id="email"
+              className="login-input"
+              type="email"
+              placeholder="seu@email.com"
+            />
 
-            <input type="password" placeholder="Digite sua senha" />
+            {/* Senha */}
+            <label htmlFor="senha">Senha</label>
 
-            <button>Entrar</button>
-          </form>
+            <div className="login-password">
+              <input
+                id="senha"
+                className="login-input"
+                type={mostrarSenha ? "text" : "password"}
+                placeholder="••••••••"
+              />
 
-          <div className="links">
-            <Link to="/cadastro">Criar uma conta</Link>
+              {mostrarSenha ? (
+                <FaEyeSlash
+                  className="login-eye"
+                  onClick={() => setMostrarSenha(false)}
+                />
+              ) : (
+                <FaEye
+                  className="login-eye"
+                  onClick={() => setMostrarSenha(true)}
+                />
+              )}
+            </div>
 
-            <Link to="/">Voltar</Link>
+            {/* Opções */}
+            <div className="login-options">
+              <label className="login-checkbox">
+                <input type="checkbox" />
+                Manter conectado
+              </label>
+
+              <Link to="/">
+                Esqueci minha senha
+              </Link>
+            </div>
+
+            {/* Botão Entrar */}
+            <button className="login-button">
+              Entrar
+            </button>
+
+            {/* Divisor */}
+            <div className="login-divider">
+              <span></span>
+              <p>ou</p>
+              <span></span>
+            </div>
+
+            {/* Criar conta */}
+            <Link to="/Cadastro">
+              <button className="login-create">
+                Criar nova conta
+              </button>
+            </Link>
+          </div>
+
+          {/* Rodapé */}
+          <div className="login-security">
+            <FaLock />
+            <span>
+              Conexão protegida por criptografia
+            </span>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
-};
+}
 
-export { Login };
-export default memo(Login);
+export default Login;

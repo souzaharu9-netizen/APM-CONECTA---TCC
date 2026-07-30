@@ -1,0 +1,993 @@
+/* ===========================================================
+   CADASTRO ADMINISTRADOR
+=========================================================== */
+
+:root{
+
+    --cadm-roxo:#6C63FF;
+    --cadm-roxo-hover:#5A52E5;
+    --cadm-roxo-claro:#F2F0FF;
+
+    --cadm-amarelo:#F6C343;
+    --cadm-amarelo-claro:#FFF8DD;
+
+    --cadm-fundo:#FFF7C8;
+    --cadm-card:#FFFDF7;
+
+    --cadm-borda:#E8DCAD;
+
+    --cadm-texto:#555;
+
+    --cadm-radius:18px;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+.cadm-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--cadm-fundo);
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+}
+
+/* ===========================================================
+   HEADER
+=========================================================== */
+
+.cadm-header{
+
+    height:72px;
+
+    background:#7B8508;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+}
+
+.cadm-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#FFF;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.cadm-logo-circle{
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    background:#F58220;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#FFF;
+
+    font-weight:bold;
+
+}
+
+.cadm-back{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+}
+
+.cadm-back:hover{
+
+    opacity:.85;
+
+}
+
+/* ===========================================================
+   HERO
+=========================================================== */
+
+.cadm-banner{
+
+    background:linear-gradient(
+        180deg,
+        #7B6CFF,
+        #6256E6
+    );
+
+    color:#FFF;
+
+    text-align:center;
+
+    padding:45px 20px 95px;
+
+}
+
+.cadm-banner-icon{
+
+    width:78px;
+
+    height:78px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.cadm-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.18);
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+}
+
+.cadm-banner h1{
+
+    font-family:Georgia,serif;
+
+    font-size:44px;
+
+    margin-bottom:16px;
+
+}
+
+.cadm-banner p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================================
+   CONTAINER
+=========================================================== */
+
+.cadm-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:-60px;
+
+    padding:0 20px 70px;
+
+}
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.cadm-card{
+
+    width:100%;
+
+    max-width:960px;
+
+    background:var(--cadm-card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid var(--cadm-borda);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.12);
+
+}
+
+/* ===========================================================
+   ALERTA
+=========================================================== */
+
+.cadm-alert{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    margin:30px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    border:2px solid #FFE6A0;
+
+    background:#FFF8DD;
+
+}
+
+.cadm-alert-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:14px;
+
+    background:#FFE39A;
+
+    color:#D69200;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.cadm-alert h3{
+
+    color:#9D6700;
+
+    margin-bottom:8px;
+
+    font-size:18px;
+
+}
+
+.cadm-alert p{
+
+    color:#7A6B3A;
+
+    line-height:1.7;
+
+}
+
+/* ===========================================================
+   TÍTULOS DAS SEÇÕES
+=========================================================== */
+
+.cadm-section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:18px 28px;
+
+    background:#F3F0FF;
+
+    color:var(--cadm-roxo);
+
+    border-bottom:1px solid #E5E1FF;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+/* ===========================================================
+   GRID
+=========================================================== */
+
+.cadm-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    padding:28px;
+
+}
+
+.cadm-full{
+
+    grid-column:1 / 3;
+
+}
+
+/* ===========================================================
+   CAMPOS
+=========================================================== */
+
+.cadm-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.cadm-field label{
+
+    margin-bottom:8px;
+
+    color:#74652B;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.cadm-input,
+.cadm-select{
+
+    width:100%;
+
+    height:54px;
+
+    padding:0 16px;
+
+    border:1px solid var(--cadm-borda);
+
+    border-radius:14px;
+
+    background:#FFF;
+
+    font-size:15px;
+
+    color:#444;
+
+    transition:.25s;
+
+}
+
+.cadm-input::placeholder{
+
+    color:#AAAAAA;
+
+}
+
+.cadm-input:focus,
+.cadm-select:focus{
+
+    outline:none;
+
+    border-color:var(--cadm-roxo);
+
+    box-shadow:0 0 0 4px rgba(108,99,255,.12);
+
+    transform:scale(1.01);
+
+}
+
+.cadm-select{
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236C63FF' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 5h10L8 11z'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 18px center;
+
+    padding-right:50px;
+
+}
+
+/* ===========================================================
+   TEXTO DE AJUDA
+=========================================================== */
+
+.cadm-help{
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    color:#888;
+
+    line-height:1.6;
+
+}
+
+/* ===========================================================
+   CAMPO SENHA (CORRIGIDO)
+=========================================================== */
+
+.cadm-password {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cadm-password .cadm-input {
+    width: 100%;
+    height: 54px;
+    padding-right: 48px;
+    display: block;
+}
+
+.cadm-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    padding: 0;
+    margin: 0;
+
+    line-height: 0; /* 🔥 elimina deslocamento estranho */
+
+    cursor: pointer;
+    color: #888;
+
+    z-index: 5;
+}
+
+.cadm-eye svg {
+    font-size: 18px;
+}
+
+.cadm-eye:hover {
+    color: var(--cadm-roxo);
+}
+
+/* ===========================================================
+   PERFIL
+=========================================================== */
+
+.cadm-profile{
+
+    padding:0 28px 30px;
+
+}
+
+.cadm-profile label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#74652B;
+
+}
+
+.cadm-profile-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    border:2px solid #DDD8FF;
+
+    background:#F8F7FF;
+
+}
+
+.cadm-profile-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--cadm-roxo);
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.cadm-profile-status{
+
+    background:var(--cadm-roxo);
+
+    color:#FFF;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+/* ===========================================================
+   TERMOS
+=========================================================== */
+
+.cadm-terms{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    padding:0 28px 30px;
+
+}
+
+.cadm-terms input{
+
+    width:18px;
+
+    height:18px;
+
+    margin-top:4px;
+
+    accent-color:var(--cadm-roxo);
+
+}
+
+.cadm-terms label{
+
+    color:#555;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+.cadm-terms a{
+
+    color:var(--cadm-roxo);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.cadm-terms a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================================================
+   BOTÕES
+=========================================================== */
+
+.cadm-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    padding:0 28px 35px;
+
+}
+
+.cadm-btn{
+
+    flex:1;
+
+    height:54px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.cadm-btn-back{
+
+    background:#FFF;
+
+    border:2px solid #DDD5B5;
+
+    color:#666;
+
+}
+
+.cadm-btn-back:hover{
+
+    background:#F5F2E8;
+
+}
+
+.cadm-btn-clear{
+
+    background:#FFF;
+
+    border:2px solid var(--cadm-amarelo);
+
+    color:#B97A00;
+
+}
+
+.cadm-btn-clear:hover{
+
+    background:var(--cadm-amarelo);
+
+    color:#FFF;
+
+}
+
+.cadm-btn-submit{
+
+    border:none;
+
+    background:var(--cadm-roxo);
+
+    color:#FFF;
+
+}
+
+.cadm-btn-submit:hover{
+
+    background:var(--cadm-roxo-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 24px rgba(108,99,255,.25);
+
+}
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+.cadm-footer{
+
+    margin-top:auto;
+
+    background:#7B8508;
+
+    color:#FFF;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:24px 60px;
+
+}
+
+.cadm-footer p{
+
+    font-size:14px;
+
+}
+
+.cadm-footer-links{
+
+    display:flex;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.cadm-footer-links a{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.cadm-footer-links a:hover{
+
+    opacity:.8;
+
+}
+
+/* ===========================================================
+   ANIMAÇÕES
+=========================================================== */
+
+.cadm-card{
+
+    animation:cadmFade .45s ease;
+
+}
+
+@keyframes cadmFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.cadm-input,
+.cadm-select{
+
+    transition:
+        border-color .25s,
+        box-shadow .25s,
+        transform .2s;
+
+}
+
+.cadm-btn{
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s,
+        box-shadow .25s;
+
+}
+
+.cadm-btn:hover{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+}
+
+/* ===========================================================
+   RESPONSIVO
+=========================================================== */
+
+@media(max-width:992px){
+
+    .cadm-header{
+
+        padding:20px;
+
+    }
+
+    .cadm-card{
+
+        max-width:100%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .cadm-header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    .cadm-banner{
+
+        padding:40px 20px 85px;
+
+    }
+
+    .cadm-banner h1{
+
+        font-size:32px;
+
+    }
+
+    .cadm-grid{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+
+    }
+
+    .cadm-full{
+
+        grid-column:auto;
+
+    }
+
+    .cadm-alert{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        align-items:center;
+
+        margin:20px;
+
+    }
+
+    .cadm-profile,
+    .cadm-terms,
+    .cadm-buttons{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+    .cadm-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cadm-footer{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px 20px;
+
+    }
+
+    .cadm-footer-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cadm-banner h1{
+
+        font-size:27px;
+
+    }
+
+    .cadm-banner p{
+
+        font-size:14px;
+
+    }
+
+    .cadm-banner-icon{
+
+        width:64px;
+
+        height:64px;
+
+        font-size:28px;
+
+    }
+
+    .cadm-input,
+    .cadm-select{
+
+        height:48px;
+
+        font-size:14px;
+
+    }
+
+    .cadm-btn{
+
+        height:50px;
+
+        font-size:15px;
+
+    }
+
+}
